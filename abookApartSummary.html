@@ -3,6 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>summary</title>
+    <style type="text/css">
+        code{color: deepskyblue;
+             font:consolas;
+             }
+    </style>
 </head>
 <body>
     <div id="container">
@@ -19,44 +24,223 @@
             </header>
 
             <div id="content">
-                <section>
+                <section id="chapter1">
                     <h2>Chapter One: A brief history of Markup</h2>
                         <ul>
                             <li>HyperText Markup Language(HTML) was the brainchild of Sir Tim Berners-Lee</li> 
                             <br/>   
                             <li>The first official specification was <strong>HTML 2.0,</strong> published by the IETF.Thus there was never HTML 1.0 </li>
                             <br/>
-                            <li>The role of the IETF was superceded by the W3C, the World Wide Web Consortium, where subsequent iterations of the HTML standard have been published at <a href="http://www.w3.org">http://www.w3.org</a>.</li>  
+                            <li>The role of the <abbr>IETF</abbr> was superceded by the W3C, the World Wide Web Consortium, where subsequent iterations of the HTML standard have been published at 
+                            <a href="http://www.w3.org">http://www.w3.org</a>.</li>  
                             <br/>                      
                             <li>After subsequent revisions from HTML 2.0 to HTML 4.01, the next revision bore XHTML 1.0</li>
                             <br/>                        
                             <li>eXtreem HTML 1.0/XHTML 1.0 was different from HTML in the syntax only whereby XHTML required a stricter adherance to the rules of XML markup language.</li>
                             <br/>
-                            <li>WHATWG stands for WebHypertext Application Technology Working Group.It propagated the idea of extending HTML to allow the creation of web applications, opposed to the path the W3C took of XHTML 2.0 which was backward incorpartible.</li> 
+                            <li><abbr>WHATWG</abbr> stands for WebHypertext Application Technology Working Group.It propagated the idea of extending HTML to allow the creation of web applications, opposed to the path the W3C took of XHTML 2.0 which was backward incorpartible.</li> 
                             <br/>                 
-                            <li>HTML5 is a specification that merged two specifications: Web Forms 2.0 and Web Apps 1.0. Both specifications were from the WHATWG and were intended to extend HTML</li>  
+                            <li>HTML5 is a specification that merged two specifications: Web Forms 2.0 and Web Apps 1.0. Both specifications were from the WHATWG and were intended to extend HTML </li>  
                             <br/>                      
-                            <li></li>                        
-                            <li></li>                        
-                            <li></li>                        
-                            <li></li>                        
-                        </li>
+                            <li>There are two groups working on HTML5. The <strong>WHATWG</strong> is creating an HTML5 specification using its process of <em>“commit then review. ”</em> The 
+                            <strong>W3C HTML Working Group </strong>is taking that specification and putting it through its process of <em>“review then commit.” </em></li>                        
+                            <br/>
+                            <li><abbr>XHTML</abbr> is dead.</li>
+                            <br/>
+                            <li>HTML5 follows a design principle of “Priority of constituencies,” which states, “In case of conflict, consider users over authors over implementers over specifiers over theoretical purity.”</li> 
+                            <br/>                       
+                            <li>The minimum information required to ensure that <em>a browser renders using 
+                            <strong>standards mode</strong></em> is the "HTML5 doctype".In fact, that’s the only reason to include the doctype at all</li>
+                            <br/>                        
+                        </ul>
                 </section>
 
-                <section>
+                <section id="chapter2">
                     <h2>Chapter Two: The design of HTML5</h2>
+                        <ul>
+                            <li>One of the key principles of HTML5(and the reason why it gained favour over XHTML) is to “Support existing content.”</li>
+                            <br/>
+                            <li>Some of the other design principles include “Do not reinvent the wheel,” and “Pave the cowpaths.”</li> 
+                            <br/>
+                            <li>The principle “Pave the cowpaths”, put in another way is:“If it ain’t broke, don’t fix it.” This helps in achieving the "Priority of constituencies" design principle.</a>.</li>  
+                            <br/>                      
+                            <li>The HTML5 specification needs to be powerful enough to support the creation of web applications while still needs to support existing content, even if most existing content is a complete mess.Thus need to strike a balance between this concerns.</li>
+                            <br/>                        
+                            <li>The HTML5 specification doesn’t just declare what browsers should do when they are processing well-formed markup, but also defines what browsers should do when they are dealing with badly formed documents.The latter is important for browser makers</li>
+                            <br/>
+                            <li>HTML5 takes the approach of keeping it simple and straight forward in its doctype declaration and meta tags.This is illustrated in creating this document within the "head" tag</li> 
+                            <br/>                 
+                            <li>In HTML5 the white space at the start of a line isn’t significant. Nor is the application of case sensitive tags.having to enforce preferred writing style is a personal choice unlike in some languages such as python.</li>  
+                            <br/>
+                            <li>You also dont have to include the "type='text/css' " attribute of a link tag nor the same attribute in a "script" element in HTML5 </li>  
+                            <br/> 
+                            <li>Test HTML5 markup against a particular style using lint tools</li>  
+                            <br/> 
+                            <li>No deprecated elements but obsolete elements  for purposes of backward compartibility. If used though(the obsolete elem i.e) it leads to issue of <strong>non-conformance</strong> of the html doc</li>  
+                            <br/>
+                            <li>Some obsolete elements include the frame, frameset, acronym(replaced by “abbr”) and noframes elements</li>
+                            <br/>
+                            <li>10. Presentational elements such as "font" , "big" , "center" , and "strike" are obsolete in HTML5; instead CSS properties such as "font-size" and "text- align" are used.</li>
+                            <br/>
+                            <li>Also presentational attributes such as "bgcolor", "cellspacing", "cellpadding", and valign are obsolete. Just use CSS instead.</li>
+                            <br/>
+                            <li>Some elements have also seen their replacement so as to suit the purpose of their use. Example "b" element for bold replaced with "strong" element</li>
+                            <br/>
+                            <li>Some elements have also seen their replacement so as to suit the purpose of their use. Example "b" element for bold replaced with "strong" element, "cite" element for “the title of a work.” and not “a reference to other sources ,e.g author” e.t.c.</li>
+                            <br/>
+                            <li>In HTML5, you can wrap multiple elements in a single "a" tag element. Example:</li>
+                            <ul>
+                                <code>
+                                    &lt a href="/about"&gt
+                                    <div style="margin-left:20px"> 
+                                        &lth2&ltAbout me&lt/h2&gt <br/> 
+                                        &ltp&gtFind out what makes me tick.&lt/p&gt <br/>
+                                    </div>
+                                    &lt/a&gt
+                                </code>
+                            </ul>
+                            <p>The only caveat is that you can’t nest an "a" element within another "a" element. </p>
+                            <li>HTML5 also includes js API's as well e.g Undo- Manager that allows the browser to keep track of changes to a document, and many more.</li>
+                            <br/> 
+                        </ul>
                 </section>
 
-                <section>
+                <section id="chapter4">
                     <h2>Chapter Three: Rich media</h2>
+                        <ul>
+                            <li>Html5 introduces rich media elements native to the browsers to replace the plugins.Plugins fill the holes on the web. They make it relatively easy to get games, films, and music online.</li>
+                            <br/>
+                            <li>Plugin technologies are not open. They are not created by the community. They are under the control of individual companies.And this can be restrictive to developers thus the advantage of rich media elements introduced.</li>
+                            <br/>
+                            <li>Examples of this media elements include the canvas, audio and video elements.
+                            </li>
+                            <br/>
+                            <li>Below are examples of audio and video elements.</li>
+                            <br/>
+                        
+                            <div>
+                                <fieldset>
+                                    <legend><h4>Media</h4></legend>
+                                    <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Audio</td>
+                                            <td>
+                                                <audio src="http://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" controls="">
+                                                </audio>
+                                            </td>
+                                            <td>
+                                                <code>
+                                                    &lt;audio src=http://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3 controls&gt;
+                                                    &lt;/audio&gt;
+                                                </code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Video
+                                            </td>
+                                            <td>
+                                                <video controls="" width="300">
+                                                <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+                                            </video>
+                                            </td>
+                                            <td>
+                                                <code>
+                                                    &lt;video src=http://techslides.com/demos/sample-videos/small.mp4 controls&gt;
+                                                    &lt;/video&gt;
+                                                </code>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                </fieldset>
+                            </div>
+                        </ul>
                 </section>
 
-                <section>
+                <section id="chapter4">
+
                     <h2>Chapter Four: Web Forms 2.0</h2>
+                        <ul>
+                            <li>HTML5 has migrated from from scripted to declarative solutions. This specification introduces many new form enhancements.</li>
+                            <br/>
+                            <li>Instead of requiring JS for inline form validation, CSS does it and inline with the form element. This is illustrated below.</li>
+                            <br/>
+                            <div>
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="text" placeholder="example@info.com">
+                            </div>                      
+                            <p>The code for this is as below:</p>
+                                <code>
+                                    &ltlabel for="email"&gtEmail&lt/label&gt <br/>
+                                    &ltinput id="email" name="email" type="text" placeholder="example@info.com"&gt
+                                </code>
+                            <li>The datalist  element for concatenating behaviour of input and select tags is also introduced in HTML5.It works as shown below.</li>
+                            <br/>
+                            <div>
+                                <label for="homeworld">Your home planet</label> 
+                                <input type="text" name="homeworld" id="homeworld" list="planets"> 
+                                <datalist id="planets"> 
+                                <option value="Mercury"> 
+                                <option value="Venus">
+                                <option value="Uranus"> 
+                                <option value="Neptune"> 
+                                </datalist>
+                            </div> 
+                            <p>This is very handy for situations that would normally require an extra form field
+                             labeled, “If ‘other’, please specify ___________”. If a browser doesn’t support 
+                             datalist , then the form field behaves as a normal input.</p>                      
+
+                        </ul>
+
+                
                 </section>
 
-                <section>
+                <section id="chapter5">
                     <h2>Chapter Five: Semantics</h2>
+                        <hgroup> 
+                            <ul>                    
+                                <li>Extensibility is about adding more semantic value to elements using the
+                                class attribute. This class attribut can be used by browers if they follow the agreed onventions.</li>
+                                <br/>
+                                <li>Microformats are a set of conventions which are agreed upon by a community.They are used with classes to extend the HTML5 attributes. However, they are
+                                limited by design. They solve 80% of the use cases with 20% of the effort.
+                                <li>
+                                <br/>
+                                <li><em>Mark</em> this is used to highlight a search item. For example</li>
+                                    <p>Search results for 'unicorn'</p>
+                                    <ol>
+                                    <li><a href="http://clearleft.com/">
+                                        Riding the UX <mark>unicorn</mark> across »
+                                        the rainbow of the web.
+                                    </a></li>
+                                    </ol>
+
+                                <li><em>Meter</em> marks up measurements which have a scale of min and max.</li>
+                                    <meter>9 out of 10 cats</meter>
+
+                                    <meter max="10">9 cats</meter>
+                                    <meter low="-273" high="100" min="12" max="30" »="" optimum="21" value="25">
+                                    It's quite warm for this time of year.
+                                    </meter>
+
+                                <li><em>Progress</em> marks up a value that is in the process of changing.
+                                <p>This is 
+                                    Your profile is <progress>60%</progress> complete.
+                                <progress min="0" max="100" value="60"></progress></p>
+                                </li>
+                                <li>HTML5 introduces new structural elements that includes:</li>
+                                    <ul>
+                                        <li>section</li>
+                                        <li>header</li>
+                                        <li>footer</li>
+                                        <li>aside</li>
+                                        <li>nav</li>
+                                        <li>article</li>
+                                    </ul>
+                                <li>Caution: Do not replace the new structural element without first thinking of the content.</li>
+                            </ul>
+                        </hgroup>
                 </section>
 
                 <section>

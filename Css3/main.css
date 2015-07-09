@@ -1,0 +1,131 @@
+/*A css for the css_index.html*/
+
+@font-face {
+font-family: 'Indie_Flower';
+src: url('fonts/Indie_Flower/IndieFlower.ttf');
+}
+@font-face {
+font-family: 'Lobster-Regular';
+src: url('fonts/Lobster/Lobster-Regular.ttf');
+}
+table-caption{
+    caption-side: top;
+}
+
+table,thead,tbody,tr,th,td{
+    border:2px solid transparent;
+    border-collapse:collapse;
+    padding: 4px;
+}
+th{
+    text-align: left;
+    font-weight: bolder;
+    font-family: "Indie_Flower"
+}
+td{
+    text-align: center;
+    font-family: Impact;}
+tbody tr:nth-of-type(even){ 
+    background-color: #DDD; 
+}
+thead:first-of-type{ 
+    background-color: #98A09F; 
+}
+td:empty{
+    border-top-color:transparent; ;
+    border-left-style: hidden;
+}
+
+p::-moz-selection{
+    background-color: purple;
+}
+body> div{
+
+    margin-top: 60px;
+}
+
+body > p:first-of-type{
+    padding: 2em;
+    outline-width: 40%;
+    position:relative;left:10%;
+    box-shadow: inset 5px 5px;
+    clear:both;
+    background-image: repeating-linear-gradient(green, yellow 50%,white 70%, green);
+    background-clip: content-box;
+}
+
+p#special{
+    /*using the border image shorthand:
+        E { border-image: source slice / width / outset repeat; }*/
+    display:block;
+    border-image: url('images/cakes_img.jpeg') 35 20 / 5px round;
+}
+
+.columns{
+    clear:both;
+    -moz-column-count:3;
+}
+img{
+    transition: transform(translate(0deg)) 1s;
+    transition-timing-function: cubic-bezier(0.6, 0.1, 0.15, 0.7);
+
+}
+
+img.transitional:hover{
+    transform: rotate(-90deg);
+
+}
+
+img#logo{
+    margin:10px;
+    position:relative;
+    outline-width: 90%;
+    top:1%;
+    right:100%;
+    bottom:20%;
+    left:0%;
+    width: 90%;
+    transform:rotate(0deg);
+
+}
+
+button{
+    display:block;
+    width:8em; 
+    margin:2em;
+    margin-left:0em;
+    float:left;
+    padding:5px;
+    background-color:#3366CC;
+    border-style:solid;
+    border-radius:5px;/*To round the corners of the borders*/
+}
+button.next{
+    position:relative;
+    bottom:0px;
+    background-color:rgba(0,90,210, 1.0);
+
+}
+a{
+
+}
+a.button{
+    display:block;
+}
+h1{
+    font-family: Lobster-Regular;
+}
+
+@media only screen and (min-width: 450px) and (orientation:landscape){
+    #logo{ 
+        background-image: url('images/Shopping_photo1.jpg'); 
+        background-size: 100% 100%; 
+
+    }
+    body div.columns{
+        /*background-image: url('images/green-bar-right-curve-alt.jpg');*/
+        background-attachment:;
+        background-repeat: space;
+        opacity:1;
+    }
+}
